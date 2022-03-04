@@ -135,7 +135,8 @@ header{
 
 .sobre {
     width: 100%;
-    height: 600px;
+    height: auto;
+    min-height: 600px;
     background-color: #f6e58d;
     display: flex;
     flex-direction: column;
@@ -150,9 +151,30 @@ header{
     border-radius: 10px;
     border: 2px solid black;
     max-width: 90%;
-    width: 600px;
-    height: 400px;
+    width: 900px;
+    min-height: 400px;
+    height: auto;
     padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bloco-sobre{
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bloco-sobre figure img, .bloco-sobre p{
+    width: 300px;
+}
+
+
+
+.bloco-sobre p{
+    padding-bottom: 10px;
 }
 
 .trabalho {
@@ -180,4 +202,15 @@ footer {
     background-color: #ffbe76;
 }
 
-
+@media only screen and (min-width: 990px){
+    .bloco-sobre figure img:hover{
+        position: absolute;
+        top: 0;
+        border: 2px solid black;
+        box-shadow: 6px 9px 1px 0px #000000;
+        border-radius: 10px;
+        transition: 0.5s;
+        width: 600px;
+        z-index: 20;
+    }
+}
