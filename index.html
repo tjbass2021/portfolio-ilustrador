@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="logotipo">
-            <img src="assets/img/eu1.jpg" alt="">
+            <img src="assets/img/eu-logo-transparent.png" alt="">
             <h1>Portfolio</h1>
         </div>
         <nav>
@@ -30,7 +30,7 @@
 
             <div class="apresentacao">
                 <div class="balao"><p>E aí?!</p></div>
-                <img class="eu" src="assets/img/eu1.jpg" alt="">
+                <img class="eu" src="assets/img/eu5.png" alt="">
 
                 <h1>Oi, me chamo Thiago Okan</h1>
                 <h3>e sou ilustrador.</h3>
@@ -47,7 +47,7 @@
                 <h2>Sobre mim</h2>
                 <div class="bloco-sobre">
                     <figure>
-                        <img src="assets/img/ilustra-sobre.png" alt="Thiago Okan versão ilustrada">
+                        <img src="assets/img/EU.png" alt="Thiago Okan versão ilustrada">
                     </figure>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet mi cursus, rhoncus augue rhoncus, ultrices quam. Nunc venenatis libero erat, ut scelerisque quam ullamcorper eu. Ut convallis egestas ex quis tincidunt. Nam quis mauris nibh. Proin feugiat porta metus, a convallis odio consequat nec. Aliquam sed nulla augue. Quisque quis auctor enim, vitae suscipit dui. Morbi congue metus a ultrices cursus. Maecenas quis diam placerat, lacinia felis eu, varius mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus convallis velit nec nibh lacinia iaculis.
@@ -58,8 +58,31 @@
 
         <section class="trabalho">
             <div class="caixa-trabalhos">
-                <h2>Trabalhos</h2>
+                <h2 id="trabalhos">Trabalhos</h2>
+                <div class="bloco-trabalhos">
+                    <nav class="links">
+                        <button class="comics bg-aquamarine">Quadrinhos</button>
+                        <button class="ilustras">Ilustrações</button>
+                    </nav>
+                    <div class="quadrinhos d-flex">
+                        <figure>
+                            <img class="expurgo" src="assets/img/expurgo 01.png" alt="">
+                        </figure>
+                        <figure>
+                            <img src="assets/img/devaneios 3 de fato.png" alt="" class="devaneios">
+                        </figure>
+                    </div>
+                    <div class="ilustracoes d-none">
+                        <figure>
+                            <img src="assets/img/ROSE PERFIL2.png" alt="" class="desenho">
+                        </figure>
+                        <figure>
+                            <img src="assets/img/NAOMI PERFIL.png" alt="" class="naomi">
+                        </figure>
+                    </div>
+                </div>
             </div>
+            <button class="ver-tudo">VER TUDO</button>
         </section>
 
         <section class="contato">

@@ -2,16 +2,33 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Comic Neue', cursive;
+    /* font-family: 'Comic Neue', cursive; */
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #000000;
 }
 
 header{
     /* background-color: #fdcb6e; */
-    background-color: #f6e58d;
+    /* background-color: #f6e58d; */
+    background-color: #181818;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+    color: white;
+    border-bottom: 5px solid white;
+    width: 95%;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 20px;
     
 }
 
@@ -28,6 +45,7 @@ header{
     border-radius: 100%;
     border: 2px solid white;
     margin-right: 5px;
+    background-color: white;
 }
 
 .menu{
@@ -38,15 +56,16 @@ header{
 .menu a {
     margin-right: 10px;
     text-decoration: none;
-    color: black;
+    color: white;
     padding: 10px;
     font-size: 20px;
+    border-radius: 10px;
 }
 
 .menu a:hover{
     background-color: white;
+    color:black;
     padding: 10px;
-    box-shadow: 6px 9px 1px 0px #000000;
     transition: 0.4s;
     border-radius: 10px;
 }
@@ -54,28 +73,43 @@ header{
 .topo {
     width: 100%;
     height: 600px;
-    background-color: #ffbe76;
+    background-color: #2f2f2f;
+    border-radius: 20px;
+    margin: 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    
     
 }
 
 .icones img{
     width: 54px;
     margin-top: 10px;
+    background-color: white;
+    border-radius: 30%;
 }
 
 .icones img:hover{
-    background-color: #f6e58d;
-    border-radius: 10px;
-    transition: 0.4s;
+    
+    
+    border-radius: 30%;
+    transition: 0.5s;
+    box-shadow: 5px 5px 1px 0px #000000;
+}
+
+.icones-invert{
+    width: 54px;
+    margin-top: 10px;
+    background-color: black;
+    filter: invert(100);
 }
 
 .apresentacao{
     position: relative;
     background-color: white;
     padding: 20px;
+    border: 2px solid black;
     box-shadow: 6px 9px 1px 0px #000000;
     width: 400px;
     height: 300px;
@@ -100,7 +134,7 @@ header{
     display: none;
     text-align: center;
     position: absolute;
-    width: 100px;
+    width: auto;
     height: 50px;
     z-index: 10;
     right: 0;
@@ -110,6 +144,7 @@ header{
     border-radius: 20px;
     box-shadow: 6px 9px 1px 0px #000000;
     transition: 0.5s;
+    padding: 5px 30px;
 
     
 }
@@ -117,11 +152,19 @@ header{
 .d-block{
     display: block;
 }
-
-.balao p{
-    margin: 15px 0;
+.d-flex{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
+.d-none{
+    display: none;
+}
+
+.balao p{
+    font-size: 30px;
+}
 
 .eu{
     border: 5px solid white;
@@ -131,17 +174,22 @@ header{
     border-radius: 100%;
     top: -120px;
     right: 80px;
+    
 }
 
 .sobre {
     width: 100%;
     height: auto;
     min-height: 600px;
-    background-color: #f6e58d;
+    background-color: #2f2f2f;
+    border-radius: 20px;
+    margin: 20px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 25px;
+    padding: 20px 0;
 
 }
 
@@ -150,8 +198,8 @@ header{
     box-shadow: 6px 9px 1px 0px #000000;
     border-radius: 10px;
     border: 2px solid black;
-    max-width: 90%;
-    width: 900px;
+    max-width: 95%;
+    width: 100%;
     min-height: 400px;
     height: auto;
     padding: 10px 20px;
@@ -171,26 +219,103 @@ header{
     width: 300px;
 }
 
-
-
 .bloco-sobre p{
     padding-bottom: 10px;
+    width: 600px;
 }
 
-.trabalho {
-    width: 100%;
-    height: 600px;
-    background-color: #ffbe76;
+.bloco-trabalhos{
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
+}
+.links{
+    margin-bottom: 15px;
+}
+
+.comics, .ilustras{
+    text-decoration: none;
+    color: black;
+    border: 0;
+    border-bottom: 2px solid black;
+    padding: 5px 40px;
+    margin: 10px;
+    font-size: 20px;
+}
+
+
+.comics:hover, .ilustras:hover{
+    background-color: #181818;
+    color: white;
+    transition: 0.5s;
+    box-shadow: 6px 9px 1px 0px #000000;
+    cursor: pointer;
+}
+
+.bg-aquamarine{
+    background-color: #181818;
+    color: white;
+}
+
+
+.trabalho {
+    width: 100%;
+    height: auto;
+    background-color: #2f2f2f;
+    border-radius: 20px;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.ver-tudo{
+    background-color: #55E6C1;
+    box-shadow: 6px 9px 1px 0px #000000;
+    color: black;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 0;
+    width: 95%;
+    font-size: 20px;
+}
+
+.ver-tudo:hover{
+    background-color: #9AECDB;
+    color: black;
+    transition: 0.5s;
+    box-shadow: 6px 9px 1px 0px #000000;
+    cursor: pointer;
+}
+
+.position-absolute{
+    position: absolute;
+    top: 100vh;
+    width: 200%;
+}
+
+.position-absolute-minor{
+    position: absolute;
+    
+}
+
+
+.expurgo, .desenho, .devaneios, .naomi{
+    width: 400px;
 }
 
 .contato {
     width: 100%;
     height: 600px;
-    background-color: #f6e58d;
+    background-color: #2f2f2f;
+    border-radius: 20px;
+    margin: 20px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -199,18 +324,92 @@ header{
 
 footer {
     width: 100%;
-    background-color: #ffbe76;
+    /* background-color: #ffbe76; */
 }
 
 @media only screen and (min-width: 990px){
-    .bloco-sobre figure img:hover{
+
+
+    .caixa-sobre, .caixa-contato, .caixa-trabalhos{
+        min-width: 80%;
+    }
+
+    .bloco-sobre figure img{
+        min-width: 500px;
+    }
+}
+
+@media only screen and (max-width: 989px){
+    body{
+        display: block;
+    }
+
+    header{
+        width: 100%;
+        border-radius: 0;
+        margin-top: 0;
+    }
+
+    .topo, .sobre, .trabalho, .contato{
+        border-radius: 0;
+    }
+}
+
+@media only screen and (max-width: 620px){
+    .menu{
+        margin: 10px 0;
+        
+    }
+
+    .menu li a{
+        font-size: 25px;
+    }
+
+    header{
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .logotipo{
+        flex-direction: column;
+    }
+
+    .caixa-sobre, .caixa-trabalhos, .caixa-contato{
+        min-width: 95%;
+    }
+
+    .expurgo, .desenho, .devaneios, .naomi{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 424px){
+    .menu{
+        display: none;
+    }
+
+    .apresentacao{
+        max-width: 95%;
+        height: auto;
+    }
+
+    .eu{
         position: absolute;
-        top: 0;
-        border: 2px solid black;
-        box-shadow: 6px 9px 1px 0px #000000;
-        border-radius: 10px;
-        transition: 0.5s;
-        width: 600px;
-        z-index: 20;
+        right: auto;
+        left: auto;
+    }
+}
+
+@media only screen and (max-width: 334px){
+    .bloco-sobre figure img{
+        max-width: 100%;
+    }
+
+    .eu{
+        max-width: 100%;
+    }
+
+    .logotipo{
+        display: none;
     }
 }
